@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./colors.scss";
+
+body {
+  background: $bg-color;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+button {
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.btn-secondary {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    rgba(255, 255, 255, 0.2);
+  background-blend-mode: normal, overlay;
+  backdrop-filter: blur(27.1828px);
+  color: rgba(255, 255, 255, 0.6);
+  mix-blend-mode: normal;
+
+  svg {
+    opacity: 0.6;
+  }
+}
+
+.rating-bad {
+  color: $rating-bad;
+}
+
+.rating-average {
+  color: $rating-average;
+}
+
+.rating-good {
+  color: $rating-good;
+}
+
+.rating-excellent {
+  color: $rating-excellent;
+}
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
